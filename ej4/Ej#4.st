@@ -62,11 +62,8 @@ DenotativeObject subclass: #II
 II class
 	instanceVariableNames: 'prev'!
 
-!II class methodsFor: '-- all --' stamp: 'TM 3/23/2025 13:26:53'!
-* multiplier 
-  
-  (multiplier asString = 'I') ifTrue: [^self].
- 
+!II class methodsFor: '-- all --' stamp: 'tp 3/25/2025 18:16:54'!
+* multiplier  
   ^self + (self * multiplier previous).! !
 
 !II class methodsFor: '-- all --' stamp: 'TM 3/23/2025 12:21:03'!
@@ -84,11 +81,11 @@ aNumber = I  ifTrue: [^self previous].
 
 ! !
 
-!II class methodsFor: '-- all --' stamp: 'TM 3/23/2025 14:36:26'!
+!II class methodsFor: '-- all --' stamp: 'tp 3/25/2025 18:11:15'!
 / dividend
 |resultado|
  
-((self asString size) < (dividend asString size)) ifTrue: [I].
+((self asString size) < (dividend asString size)) ifTrue: [^I].
 
 resultado := (self - dividend) / dividend.
 ^resultado + I.
@@ -98,7 +95,7 @@ resultado := (self - dividend) / dividend.
 
 ! !
 
-!II class methodsFor: '--** private fileout/in **--' stamp: 'TM 3/23/2025 14:38:34'!
+!II class methodsFor: '--** private fileout/in **--' stamp: 'tp 3/25/2025 18:39:22'!
 initializeCollaboratorsFromFile
 	"Auto generated method for loading purposes - Do not modify it"
 
@@ -126,15 +123,15 @@ previous
 ^self instVarNamed: 'prev'. ! !
 
 
-!II class methodsFor: '--** private fileout/in **--' stamp: 'TM 3/23/2025 14:38:34'!
+!II class methodsFor: '--** private fileout/in **--' stamp: 'tp 3/25/2025 18:39:22'!
 initializeCollaboratorsFromFile
 	"Auto generated method for loading purposes - Do not modify it"
 
 	prev := I.! !
 
 
-!classDefinition: #III category: #'Ej 4'!
-DenotativeObject subclass: #III
+!classDefinition: #IIIIII category: #'Ej 4'!
+DenotativeObject subclass: #IIIIII
 	instanceVariableNames: ''
 	classVariableNames: ''
 	poolDictionaries: ''
@@ -142,23 +139,23 @@ DenotativeObject subclass: #III
 
 "-- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- "!
 
-!classDefinition: 'III class' category: #'Ej 4'!
-III class
+!classDefinition: 'IIIIII class' category: #'Ej 4'!
+IIIIII class
 	instanceVariableNames: 'prev'!
 
-!III class methodsFor: '-- all --' stamp: 'TM 3/23/2025 14:19:10'!
+!IIIIII class methodsFor: '-- all --' stamp: 'tp 3/25/2025 18:14:45'!
 * multiplier 
   
   (multiplier asString = 'I') ifTrue: [^self].
  
   ^self + (self * multiplier previous).! !
 
-!III class methodsFor: '-- all --' stamp: 'TM 3/23/2025 14:19:10'!
+!IIIIII class methodsFor: '-- all --' stamp: 'tp 3/25/2025 18:14:45'!
 + anAdder 
 
 ^self previous + anAdder next. ! !
 
-!III class methodsFor: '-- all --' stamp: 'TM 3/23/2025 14:19:10'!
+!IIIIII class methodsFor: '-- all --' stamp: 'tp 3/25/2025 18:14:45'!
 - aNumber 
 ((self asString size) <= (aNumber asString size)) ifTrue: [self error: 'Te fuiste pa'].
 aNumber = I  ifTrue: [^self previous]. 
@@ -168,20 +165,27 @@ aNumber = I  ifTrue: [^self previous].
 
 ! !
 
-!III class methodsFor: '-- all --' stamp: 'TM 3/23/2025 14:19:10'!
-/ dividend 
+!IIIIII class methodsFor: '-- all --' stamp: 'tp 3/25/2025 18:14:45'!
+/ dividend
+|resultado|
+ 
+((self asString size) < (dividend asString size)) ifTrue: [^I].
+
+resultado := (self - dividend) / dividend.
+^resultado + I.
+
 
 
 
 ! !
 
-!III class methodsFor: '--** private fileout/in **--' stamp: 'TM 3/23/2025 14:38:34'!
+!IIIIII class methodsFor: '--** private fileout/in **--' stamp: 'tp 3/25/2025 18:39:22'!
 initializeCollaboratorsFromFile
 	"Auto generated method for loading purposes - Do not modify it"
 
-	prev := II.! !
+	prev := AnObsoleteIIIII.! !
 
-!III class methodsFor: '-- all --' stamp: 'TM 3/23/2025 14:19:10'!
+!IIIIII class methodsFor: '-- all --' stamp: 'tp 3/25/2025 18:14:45'!
 next  
 | classname newClone existingObject |
   classname := (self asString, 'I').
@@ -197,21 +201,21 @@ next
   ].
  ! !
 
-!III class methodsFor: '-- all --' stamp: 'TM 3/23/2025 14:19:10'!
+!IIIIII class methodsFor: '-- all --' stamp: 'tp 3/25/2025 18:14:45'!
 previous 
 
 ^self instVarNamed: 'prev'. ! !
 
 
-!III class methodsFor: '--** private fileout/in **--' stamp: 'TM 3/23/2025 14:38:34'!
+!IIIIII class methodsFor: '--** private fileout/in **--' stamp: 'tp 3/25/2025 18:39:22'!
 initializeCollaboratorsFromFile
 	"Auto generated method for loading purposes - Do not modify it"
 
-	prev := II.! !
+	prev := AnObsoleteIIIII.! !
 
 
-!classDefinition: #IIII category: #'Ej 4'!
-DenotativeObject subclass: #IIII
+!classDefinition: #IIIIIII category: #'Ej 4'!
+DenotativeObject subclass: #IIIIIII
 	instanceVariableNames: ''
 	classVariableNames: ''
 	poolDictionaries: ''
@@ -219,23 +223,23 @@ DenotativeObject subclass: #IIII
 
 "-- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- "!
 
-!classDefinition: 'IIII class' category: #'Ej 4'!
-IIII class
+!classDefinition: 'IIIIIII class' category: #'Ej 4'!
+IIIIIII class
 	instanceVariableNames: 'prev'!
 
-!IIII class methodsFor: '-- all --' stamp: 'TM 3/23/2025 14:31:44'!
+!IIIIIII class methodsFor: '-- all --' stamp: 'tp 3/25/2025 18:15:07'!
 * multiplier 
   
   (multiplier asString = 'I') ifTrue: [^self].
  
   ^self + (self * multiplier previous).! !
 
-!IIII class methodsFor: '-- all --' stamp: 'TM 3/23/2025 14:31:44'!
+!IIIIIII class methodsFor: '-- all --' stamp: 'tp 3/25/2025 18:15:07'!
 + anAdder 
 
 ^self previous + anAdder next. ! !
 
-!IIII class methodsFor: '-- all --' stamp: 'TM 3/23/2025 14:31:44'!
+!IIIIIII class methodsFor: '-- all --' stamp: 'tp 3/25/2025 18:15:07'!
 - aNumber 
 ((self asString size) <= (aNumber asString size)) ifTrue: [self error: 'Te fuiste pa'].
 aNumber = I  ifTrue: [^self previous]. 
@@ -245,20 +249,27 @@ aNumber = I  ifTrue: [^self previous].
 
 ! !
 
-!IIII class methodsFor: '-- all --' stamp: 'TM 3/23/2025 14:31:44'!
-/ dividend 
+!IIIIIII class methodsFor: '-- all --' stamp: 'tp 3/25/2025 18:15:07'!
+/ dividend
+|resultado|
+ 
+((self asString size) < (dividend asString size)) ifTrue: [^I].
+
+resultado := (self - dividend) / dividend.
+^resultado + I.
+
 
 
 
 ! !
 
-!IIII class methodsFor: '--** private fileout/in **--' stamp: 'TM 3/23/2025 14:38:34'!
+!IIIIIII class methodsFor: '--** private fileout/in **--' stamp: 'tp 3/25/2025 18:39:22'!
 initializeCollaboratorsFromFile
 	"Auto generated method for loading purposes - Do not modify it"
 
-	prev := III.! !
+	prev := IIIIII.! !
 
-!IIII class methodsFor: '-- all --' stamp: 'TM 3/23/2025 14:31:44'!
+!IIIIIII class methodsFor: '-- all --' stamp: 'tp 3/25/2025 18:15:07'!
 next  
 | classname newClone existingObject |
   classname := (self asString, 'I').
@@ -274,18 +285,103 @@ next
   ].
  ! !
 
-!IIII class methodsFor: '-- all --' stamp: 'TM 3/23/2025 14:31:44'!
+!IIIIIII class methodsFor: '-- all --' stamp: 'tp 3/25/2025 18:15:07'!
 previous 
 
 ^self instVarNamed: 'prev'. ! !
 
 
-!IIII class methodsFor: '--** private fileout/in **--' stamp: 'TM 3/23/2025 14:38:34'!
+!IIIIIII class methodsFor: '--** private fileout/in **--' stamp: 'tp 3/25/2025 18:39:22'!
 initializeCollaboratorsFromFile
 	"Auto generated method for loading purposes - Do not modify it"
 
-	prev := III.! !
+	prev := IIIIII.! !
+
+
+!classDefinition: #IIIIIIII category: #'Ej 4'!
+DenotativeObject subclass: #IIIIIIII
+	instanceVariableNames: ''
+	classVariableNames: ''
+	poolDictionaries: ''
+	category: 'Ej 4'!
+
+"-- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- "!
+
+!classDefinition: 'IIIIIIII class' category: #'Ej 4'!
+IIIIIIII class
+	instanceVariableNames: 'prev'!
+
+!IIIIIIII class methodsFor: '-- all --' stamp: 'tp 3/25/2025 18:17:04'!
+* multiplier 
+  
+  (multiplier asString = 'I') ifTrue: [^self].
+ 
+  ^self + (self * multiplier previous).! !
+
+!IIIIIIII class methodsFor: '-- all --' stamp: 'tp 3/25/2025 18:17:04'!
++ anAdder 
+
+^self previous + anAdder next. ! !
+
+!IIIIIIII class methodsFor: '-- all --' stamp: 'tp 3/25/2025 18:17:04'!
+- aNumber 
+((self asString size) <= (aNumber asString size)) ifTrue: [self error: 'Te fuiste pa'].
+aNumber = I  ifTrue: [^self previous]. 
+
+^ self previous - aNumber previous.   
+
+
+! !
+
+!IIIIIIII class methodsFor: '-- all --' stamp: 'tp 3/25/2025 18:17:04'!
+/ dividend
+|resultado|
+ 
+((self asString size) < (dividend asString size)) ifTrue: [^I].
+
+resultado := (self - dividend) / dividend.
+^resultado + I.
+
+
+
+
+! !
+
+!IIIIIIII class methodsFor: '--** private fileout/in **--' stamp: 'tp 3/25/2025 18:39:22'!
+initializeCollaboratorsFromFile
+	"Auto generated method for loading purposes - Do not modify it"
+
+	prev := IIIIIII.! !
+
+!IIIIIIII class methodsFor: '-- all --' stamp: 'tp 3/25/2025 18:17:04'!
+next  
+| classname newClone existingObject |
+  classname := (self asString, 'I').
+  
+  existingObject := Smalltalk at: classname asSymbol ifAbsent: [nil].
+  
+  existingObject ifNotNil: [
+    ^existingObject
+  ] ifNil: [
+    newClone := self cloneNamed: classname.
+    newClone instVarNamed: 'prev' put: self.
+    ^newClone
+  ].
+ ! !
+
+!IIIIIIII class methodsFor: '-- all --' stamp: 'tp 3/25/2025 18:17:04'!
+previous 
+
+^self instVarNamed: 'prev'. ! !
+
+
+!IIIIIIII class methodsFor: '--** private fileout/in **--' stamp: 'tp 3/25/2025 18:39:22'!
+initializeCollaboratorsFromFile
+	"Auto generated method for loading purposes - Do not modify it"
+
+	prev := IIIIIII.! !
 
 II initializeAfterFileIn!
-III initializeAfterFileIn!
-IIII initializeAfterFileIn!
+IIIIII initializeAfterFileIn!
+IIIIIII initializeAfterFileIn!
+IIIIIIII initializeAfterFileIn!
